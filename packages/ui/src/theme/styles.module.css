@@ -1,0 +1,353 @@
+/* src/components/TriviaQuestion.module.css */
+
+.container {
+  min-height: 70vh;
+  height: 100%;
+  background: #2e93c5;
+  border-radius: 15px;
+  padding: 3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.stack {
+  text-align: center;
+}
+
+.questionText {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.introTitle {
+  letter-spacing: -1px;
+  font-weight: 800;
+}
+
+.introSubtitle {
+  letter-spacing: -0.5px;
+  font-weight: 500;
+}
+
+.introInput input {
+  font-size: 1.2rem;
+  padding: 12px;
+}
+
+.explanationContainer {
+  background: #2689bb;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  max-width: 700px;
+  height: 100%;
+  min-height: 200px;
+}
+
+.explanationTitle {
+  font-weight: 600;
+}
+
+.explanationBody {
+  font-weight: 500;
+}
+
+.toggleButton {
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 8px !important;
+  background-color: #2582b1;
+  width: 300px;
+  font-weight: 500;
+}
+
+.toggleButton:hover {
+  background-color: #2987b5;
+}
+
+.toggleButton.Mui-selected {
+  background-color: #2582b1 !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  min-height: 100vh;
+}
+
+.advert {
+  margin: 3rem 0 2rem;
+}
+
+.navigation {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+.navigation a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: "100px";
+}
+
+.navigation .logo {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+
+.code {
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.grid {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+  grid-template-columns: auto auto;
+  padding: 10px;
+
+    min-height: 200px;
+    height: 100%;
+
+}
+
+.card {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition:
+    background 200ms,
+    border 200ms;
+}
+
+.card span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.card h2 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+.footer {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.footer span a {
+  font-weight: 600;
+}
+
+.shareButton {
+  width: 150px!important;
+  margin: 0;
+  box-shadow: none!important;
+  border: none!important;
+  border-radius: 15px!important;
+  font-family: var(--font-family-sans);
+  text-transform: lowercase!important;
+  color: #fff!important;
+  font-weight: 400;
+  font-size: 17px!important;
+}
+
+.shareButton:hover {
+  box-shadow: none;
+  background-color: #4c8cd0!important;
+}
+
+.nextQuestionButton {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  max-width: 300px;
+  box-shadow: none;
+  border: none;
+  border-radius: 8px !important;
+  font-family: var(--font-family-sans);
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 17px;
+  background-color: #0e5a80 !important;
+}
+
+.nextQuestionButton:hover {
+  box-shadow: none;
+}
+
+.happyBird {
+  width: 100%;
+  height: 100%;
+  max-width: 1136px;
+  min-height: 520px;
+  border: none;
+  border-radius: 15px;
+}
+
+@media (prefers-reduced-motion) {
+  .card:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 599px) {
+  .main {
+    padding: 3rem 0;
+    justify-content: center;
+  }
+
+  .happyBird {
+    border-radius: 0;
+  }
+
+  .content {
+    padding: 4rem;
+  }
+
+  .footer {
+    height: 150px;
+  }
+
+  .footer span {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 1rem 2.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .center {
+    padding: 8rem 0 6rem;
+  }
+
+  .center::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .navigation {
+    font-size: 0.8rem;
+  }
+
+  .navigation a {
+    padding: 1rem;
+  }
+
+  .navigation .logo,
+  .navigation .nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .navigation .logo {
+    display: flex;
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 1rem;
+    border-radius: 0;
+    border: none;
+    /* border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25); */
+    height: 70px;
+  }
+
+  .navigation .nav {
+    align-items: flex-end;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 75px;
+    z-index: 1;
+  }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+.button {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e5e4e2;
+}

@@ -1,0 +1,55 @@
+{
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "wide",
+      "label": "Playing Gives"
+    },
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "narrow",
+      "label": "Playing Gives"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "theme_color": "#43b1bb",
+  "background_color": "#43b1bb",
+  "orientation": "portrait",
+  "display": "fullscreen",
+  "display-override": "fullscreen",
+  "dir": "left",
+  "lang": "en-GB",
+  "name": "Learning Gives",
+  "short_name": "Learning Gives",
+  "description": "Some fun little quizes!",
+  "id": "/?source=pwa"
+}

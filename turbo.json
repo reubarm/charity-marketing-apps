@@ -10,6 +10,7 @@
       "dependsOn": ["^lint"]
     },
     "dev": {
+      "dotEnv": [".env.local", ".env.development", ".env"],
       "cache": false,
       "persistent": true
     }
