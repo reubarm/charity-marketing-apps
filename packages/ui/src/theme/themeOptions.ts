@@ -26,7 +26,7 @@ export const themeOptions: { [key: string]: ThemeOptions } = {
     palette: {
       mode: 'dark',
       primary: {
-        main: '#20adb9',
+        main: '#4dc0ca',
         contrastText: "#FFFFFF",
         light: "#aaf8ff",
       },
