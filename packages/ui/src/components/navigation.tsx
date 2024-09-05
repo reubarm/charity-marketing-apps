@@ -60,7 +60,7 @@ export const Navigation = (props: Props) => {
             <Link key={label} href={href} passHref>
               <Typography
                 sx={{
-                  color: "inherit",
+                  color: primaryColors.contrastText,
                   fontWeight: 500,
                   fontSize: "17px",
                   textDecoration: pathname === href ? "underline" : "none",

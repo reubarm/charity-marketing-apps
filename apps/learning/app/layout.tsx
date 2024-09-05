@@ -7,7 +7,18 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Learning Gives",
   description: "A simple quiz.",
-  manifest: "/manifest.json"
+  manifest: "/manifest.json",
+  icons: [
+    {
+      url: "/favicon.ico",
+      sizes: "48x48",
+    },
+    {
+      url: "/favicon.png",
+      sizes:"512x512",
+      type: "image/png",
+    },
+  ],
 };
 
 export default function RootLayout({
