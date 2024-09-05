@@ -15,7 +15,10 @@ export default function Page(): JSX.Element {
     const setApiKeyCookie = (apiKey: string) => {
       const cookieName = "apiKey";
       const expires = "Fri, 31 Dec 9999 23:59:59 GMT";
-      document.cookie = `${cookieName}=${encodeURIComponent(apiKey)}; expires=${expires}; path=/`;
+
+      if (typeof window !== 'undefined') {
+        document.cookie = `${cookieName}=${encodeURIComponent(apiKey)}; expires=${expires}; path=/`;
+      }
     };
 
     setApiKeyCookie(process.env.NEXT_PUBLIC_API_KEY!);
