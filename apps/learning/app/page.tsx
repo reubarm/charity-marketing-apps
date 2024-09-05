@@ -1,8 +1,13 @@
 "use client";
 
 import { Advert } from "@repo/ui";
-import LearningGives from "learning-gives/dist/LearningGives";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
+
+const LearningGives = dynamic(
+  () => import('learning-gives/dist/LearningGives'),
+  { ssr: false }
+)
 
 export default function Page(): JSX.Element {
   const [refresh, setRefresh] = useState(0);
