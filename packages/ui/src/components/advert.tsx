@@ -33,11 +33,11 @@ export const Advert: React.FC<AdvertProps> = ({ refresh }) => {
     //   ? ["Criskel", "EatStreet", "OceanGolf", "Pandawa", "Rimmba"]
     //   : ["Criskel", "EatStreet", "OceanGolf", "Pandawa", "Rimmba"];
 
-    const advertElement = document.getElementById(
-      isMobile ? "advert-320x100" : "advert-728x90"
-    );
+    if (typeof window !== "undefined") {
+      const advertElement = document.getElementById(
+        isMobile ? "advert-320x100" : "advert-728x90"
+      );
 
-    if (advertElement) {
       const img = document.createElement("img");
       img.style.width = isMobile ? "320px" : "728px";
       img.style.height = isMobile ? "100px" : "90px";
@@ -45,18 +45,23 @@ export const Advert: React.FC<AdvertProps> = ({ refresh }) => {
       const randomIndex = Math.floor(Math.random() * adverts.length);
       img.src = adverts[randomIndex]!;
 
-      // Clear existing advert before appending new one
-      advertElement.innerHTML = "";
-      advertElement.appendChild(img);
+      if (advertElement) {
+        advertElement.innerHTML = "";
+        advertElement.appendChild(img);
+      }
     }
   };
 
   useEffect(() => {
     refreshAdvert();
-  }, [refresh]); 
+  }, [refresh]);
 
   return (
-    <Stack sx={{ margin: "2rem auto" }} alignItems="center" justifyContent="center">
+    <Stack
+      sx={{ margin: "2rem auto" }}
+      alignItems="center"
+      justifyContent="center"
+    >
       <div id={isMobile ? "advert-320x100" : "advert-728x90"} />
     </Stack>
   );
